@@ -41,5 +41,19 @@ Fork this repository using the button in the top right. This will create your ow
 
 Now you can clone the repository to the cluster using,
 ```
+git@github.com:<github_username>/Summer2022-PythonTutorial.git
 ```
 
+Now you can create your own branch for development using,
+```
+git checkout -b <your_new_branch_name>
+git push origin <your_new_branch_name>
+```
+
+## Pushing to GitHub After Changes
+After making changes to the code you can `add`, `commit`, then `push` your changes to your new branch on your fork.
+```
+git add .
+git commit -m "Write Some Message"
+git push
+```
