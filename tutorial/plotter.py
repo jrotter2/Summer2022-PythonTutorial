@@ -22,18 +22,24 @@ def gausppar(xs, params):
 if __name__ == "__main__":
 
    # Defining variables
-   #const = 4
-   #mu = 7
-   #sigma = 1
-   #a = 15
-   #b = -1.2
-   #c = .03
+   const = 4
+   mu = 7
+   sigma = 1
+   a = 15
+   b = -1.2
+   c = .03
 
    # Initialize Function (TF1)
-
+   gausppar = ROOT.TF1('gausppar', gausppar, 20, -1, 21)
+   gausppar.SetParameters(const, mu, sigma, a, b, c)
    # Initialize Histogram (TH1F)
+   raw = ROOT.TH1F('raw', 'Raw Distribution', 50, -.5, 20.5) 
+   raw.SetMarkerStyle(20) #DOT
+   raw.SetMarkerSize(.3) #SMALL DOTS
+   raw.SetLineColor(1) # Makes Black Line
 
    # Fill the histogram with 5000 random numbers from our function
+   raw.FillRandom('gausppar', 5000)
 
 
    # Reset our function's parameters back to 1 (Or reasonable value)
