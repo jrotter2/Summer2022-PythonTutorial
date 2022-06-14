@@ -41,7 +41,8 @@ Fork this repository using the button in the top right. This will create your ow
 
 Now you can clone the repository to the cluster using,
 ```
-git@github.com:<github_username>/Summer2022-PythonTutorial.git
+git clone git@github.com:<github_username>/Summer2022-PythonTutorial.git
+cd Summer2022-PythonTutorial
 ```
 
 Now you can create your own branch for development using,
